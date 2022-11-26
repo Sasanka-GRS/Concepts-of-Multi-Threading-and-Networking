@@ -70,16 +70,12 @@ Some additional points:
 - Make sure to give a space ' ' after the last digit in the graph specification
 
 Input format:
+
 4 5
-
 0 1 15
-
 0 2 50
-
 1 2 15
-
 2 3 20
-
 0 3 40 
 
 pt
