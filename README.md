@@ -70,7 +70,7 @@ Some additional points:
 - Make sure to give a space ' ' after the last digit in the graph specification
 
 Input format:
-
+"""
 4 5
 0 1 15
 0 2 50
@@ -81,6 +81,6 @@ Input format:
 pt
 
 send 2 Hello!
-
+"""
 If servers fail, all edges to that server are completely removed, and another routing path is found, which would require re-computation of the routing table 
 and finally, there might also be situations where the graph is no more connected and in which case, some nodes may not be reachable.
