@@ -71,12 +71,19 @@ Some additional points:
 
 Input format:
 4 5
+
 0 1 15
+
 0 2 50
+
 1 2 15
+
 2 3 20
+
 0 3 40 
+
 pt
+
 send 2 Hello!
 
 If servers fail, all edges to that server are completely removed, and another routing path is found, which would require re-computation of the routing table 
