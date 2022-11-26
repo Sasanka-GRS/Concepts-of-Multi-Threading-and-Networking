@@ -15,3 +15,31 @@
 
 ### Question-2
 
+- Implementation has been done using threads in pthread library.
+- Compilation requires -pthread flag : gcc -pthread q2.c
+- The test case input is as mentioned in the question
+
+- Implementation uses semaphore for the number of ovens free, which is initialized to the number of ovens initially.
+- Mutex locks have been user for all other resources.
+- Each customer and each chef is a thread. 
+- At every event, the time instant from the start of execution is printed.
+- Color coding is used for specific events.
+
+Algorithm:
+- Each customer aand chef are assigned to a thread.
+- Ovens is used as semaphore
+- v_num_chefs, v_num_chefs_left, v_num_orders, v_ingredients, v_order are all mutex locks, which imply mutexes for number of chefs in restaurant, number of 
+chefs left to come, number of orders processing, number of ingredients and number of waiting orders. These locks are acquired and released for changing the 
+corresponding variables
+- logic of the Implementation goes sequentially from customer thread creating an order, chefs being allocated the order, chefs processing each pizza in the 
+order after checking ingredients availability, waiting for oven semaphore to get free, baking the pizza, and finally, making the customer wait till he 
+reaches the pickup zone to pick up the completed/partially completed order.
+
+1. In the situation when the pizza storage is limited and sent to secondary storage, we can keep a counter and once the counter goes above the maximum, we route
+ those specific orders and customers to the secondary storage.
+2. As soon as the order is received, check all pizzas have enough ingredients and reject the order then and there without assigning to chef.
+3. The drive-thru will now have future information, if there is a possibility of getting ingredients, and after getting them, if the orders can be completed, 
+then the order is accepted even if there are no sufficient ingredients currently available.
+
+## Networking
+
